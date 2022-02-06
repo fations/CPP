@@ -1,0 +1,4 @@
+; $Id$
+name = sudoku
+description = Sudoku solver
+version = "$name$"

@@ -1,0 +1,31 @@
+#sudoku-frame {
+	padding:5px;
+	font-size:11px;
+	color:#FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style:italic ;
+ 
+}
+#sudoku-grid {
+	background-color:#000000;
+	text-align:center;
+
+	padding:5px;
+	overflow:visible; 
+	
+}
+#sudoku-option {
+	padding:5px;
+}
+#sudoku-size {
+	width:80%;
+}
+
+input.sudoku {
+	height:15px;
+	width:15px;
+	border:thin solid #000000;
+	background-color:#666666; 
+	color:#ffffff;
+	text-align:center;	
+}

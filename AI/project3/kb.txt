@@ -1,0 +1,8 @@
+(not P_1_1)
+(not M_1_1)
+(not P_1_2)
+(not M_1_2)
+(not P_2_1)
+(not M_2_1)
+(not P_2_2)
+(not M_2_2)

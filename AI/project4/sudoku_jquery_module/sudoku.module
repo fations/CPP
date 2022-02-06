@@ -1,0 +1,43 @@
+<?php
+// $Id$
+
+/**
+ * @file
+ * Implements various blocks to improve pending content workflow.
+ */
+ 
+/**
+ * Implementation of hook_block().
+ */
+function sudoku_block($op = 'list', $delta = 0, $edit = array()) {
+  switch ($op) {
+    case 'list':
+      $blocks[0]['info'] = t('Sudoku solver');
+      return $blocks;
+    
+    // case 'configure':
+      // Only in block 0 (the Pending comments block) can one
+      // set the number of comments to display.
+      // if ($delta == 0) {
+        // $form['approval_block_num_posts'] = array(
+          // '#type' => 'textfield',
+          // '#title' => t('Number of pending comments to display'),
+          // '#default_value' => variable_get('approval_block_num_posts', 5),
+        // );
+      // }
+      // return $form;
+    
+    // case 'save':
+      // if ($delta == 0) {
+        // variable_set('approval_block_num_posts', (int) $edit['approval_block_num_posts']);
+      // }
+      // break;
+    
+    case 'view': 
+				drupal_add_js(drupal_get_path('module', 'sudoku') .'/jquery.sudoku.js');
+				drupal_add_css(drupal_get_path('module', 'sudoku') .'/sudoku.css'); 
+        $block['subject'] = t('Sudoku solver');
+        $block['content'] = '<div id="sudoku-frame"></div>';  
+      return $block;
+  }    
+}

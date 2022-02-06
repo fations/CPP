@@ -1,0 +1,1 @@
+check_true_false wumpus_rules.txt kb1.txt statement1.txt
